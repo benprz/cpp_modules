@@ -6,7 +6,7 @@
 /*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:20:20 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/05 03:56:30 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/05 04:17:04 by neben            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void PhoneBook::addContact(void)
 		contacts_number++;
 	}
 	else
-		std::cout << "The number of contacts reached its max value (9)" << std::endl;
+		std::cout << "The number of registered contacts reached its max value (9)" << std::endl;
 }
 
 void	printContactData(std::string data)
@@ -96,27 +96,32 @@ void PhoneBook::searchContact(void)
 	std::string	line;
 	int			index;
 
-	displayContacts(Contacts, contacts_number);
-	while (1)
+	if (contacts_number)
 	{
-		std::cout << "index: ";
-		std::getline(std::cin, line);
-		if (std::cin.eof())
-			break ;
-		else if (line.length() == 1)
+		displayContacts(Contacts, contacts_number);
+		while (1)
 		{
-			index = line[0] - 48;
-			if (index >= 1 && index <= contacts_number && index <= contacts_number)
-			{
-				index -= 1;
-				std::cout << "First name : " << Contacts[index].first_name << std::endl;
-				std::cout << "Last name : " << Contacts[index].last_name << std::endl;
-				std::cout << "Nickname : " << Contacts[index].nickname << std::endl;
-				std::cout << "Phone number : " << Contacts[index].phone_number << std::endl;
-				std::cout << "Darkest secret : " << Contacts[index].darkest_secret << std::endl;
+			std::cout << "index: ";
+			std::getline(std::cin, line);
+			if (std::cin.eof())
 				break ;
+			else if (line.length() == 1)
+			{
+				index = line[0] - 48;
+				if (index >= 1 && index <= contacts_number && index <= contacts_number)
+				{
+					index -= 1;
+					std::cout << "First name : " << Contacts[index].first_name << std::endl;
+					std::cout << "Last name : " << Contacts[index].last_name << std::endl;
+					std::cout << "Nickname : " << Contacts[index].nickname << std::endl;
+					std::cout << "Phone number : " << Contacts[index].phone_number << std::endl;
+					std::cout << "Darkest secret : " << Contacts[index].darkest_secret << std::endl;
+					break ;
+				}
 			}
+			std::cout << "Please enter a valid index (1-" << contacts_number << ")" << std::endl;
 		}
-		std::cout << "Please enter a valid index (1-" << contacts_number << ")" << std::endl;
 	}
+	else
+		std::cout << "There are currently no registered contacts" << std::endl;
 }

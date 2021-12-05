@@ -6,7 +6,7 @@
 /*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 03:55:21 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/05 03:56:44 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/05 04:12:30 by neben            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,9 @@ int main(void)
 			PhoneBook.searchContact();
 	}
 	if (std::cin.eof())
+	{
 		std::cout << std::endl;
+		return (EXIT_FAILURE);
+	}
+	return (EXIT_SUCCESS);
 }
