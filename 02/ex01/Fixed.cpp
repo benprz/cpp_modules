@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 16:58:57 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/13 20:08:38 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/16 09:48:35 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 #include <iostream>
 #include <cmath>
 
-Fixed::Fixed()
+Fixed::Fixed(): _value(0)
 {
     std::cout << "Default constructor called" << std::endl;
-    _value = 0;
 }
 
 Fixed::Fixed(const Fixed &c)
@@ -27,16 +26,23 @@ Fixed::Fixed(const Fixed &c)
     *this = c;
 }
 
+Fixed::Fixed(const int i)
+{
+    std::cout << "Int constructor called" << std::endl;
+    _value = i << _number_bits;
+}
+
+Fixed::Fixed(const float f)
+{
+	std::cout << "Float constructor called" << std::endl;
+	_value = roundf(f * (1 << _number_bits));
+}
+
 Fixed& Fixed::operator=(const Fixed &c)
 {
     std::cout << "Assignation operator called" << std::endl;
     _value = c.getRawBits();
     return (*this);
-}
-
-Fixed& Fixed::operator<<(float number)
-{
-    std::cout << _value << "." << _number_bits;
 }
 
 Fixed::~Fixed()
@@ -58,10 +64,16 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return (_value);
+	return ((float)_value / (float)(1 << _number_bits));
 }
 
 int Fixed::toInt(void) const
 {
-    return (_value);
+    return (_value >> _number_bits);
+}
+
+std::ostream &operator<<(std::ostream &stream, const Fixed &c)
+{
+     stream << c.toFloat();
+	 return (stream);
 }
