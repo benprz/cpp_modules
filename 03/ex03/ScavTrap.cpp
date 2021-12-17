@@ -6,7 +6,7 @@
 /*   By: ben <ben@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 20:18:38 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 02:08:41 by ben              ###   ########lyon.fr   */
+/*   Updated: 2021/12/17 02:51:24 by ben              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ ScavTrap::ScavTrap()
 {
 	_name = "default";
 	_hitpoints = 100; 
-	_energy_points = 100; 
-	_attack_damage = 30;
+	_energy_points = 50; 
+	_attack_damage = 20;
 	std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
