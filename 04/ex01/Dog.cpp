@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:35 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/18 00:07:31 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 14:28:22 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Dog::Dog()
 {
 	std::cout << "Dog constructor called" << std::endl;	
 	_type = "Dog";
-	_brain = new Brain();
 }
 		
 Dog::Dog(Dog &c)
@@ -35,7 +34,6 @@ Dog &Dog::operator=(Dog &c)
 Dog::~Dog()
 {
 	std::cout << "Dog destructor called" << std::endl;	
-	delete _brain;
 }
 
 void	Dog::makeSound() const

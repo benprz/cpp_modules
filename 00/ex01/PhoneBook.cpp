@@ -6,7 +6,7 @@
 /*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:20:20 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/05 04:17:04 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 15:35:57 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ PhoneBook::~PhoneBook()
 {
 }
 
-void add_data_to_contact(std::string *data, std::string toprint)
+void add_data_to_contact(Contact &c, std::string toprint)
 {
 	std::string line;
 
-	while (*data == "" && std::cin.eof() == 0)
+	while (c.getData(toprint) == "" && std::cin.eof() == 0)
 	{
-		std::cout << toprint;
+		std::cout << toprint << " : ";
 		std::getline(std::cin, line);
-		*data = line;
+		c.setData(toprint, line);
 	}
 }
 
@@ -37,13 +37,13 @@ void PhoneBook::addContact(void)
 {
 	std::string line;
 
-	if (contacts_number < 9)
+	if (contacts_number < 8)
 	{
-		add_data_to_contact(&Contacts[contacts_number].first_name, "First name : ");
-		add_data_to_contact(&Contacts[contacts_number].last_name, "Last name : ");
-		add_data_to_contact(&Contacts[contacts_number].nickname, "Nickname : ");
-		add_data_to_contact(&Contacts[contacts_number].phone_number, "Phone number : ");
-		add_data_to_contact(&Contacts[contacts_number].darkest_secret, "Darkest secret : ");
+		add_data_to_contact(Contacts[contacts_number], "First name");
+		add_data_to_contact(Contacts[contacts_number], "Last name");
+		add_data_to_contact(Contacts[contacts_number], "Nickname");
+		add_data_to_contact(Contacts[contacts_number], "Phone number");
+		add_data_to_contact(Contacts[contacts_number], "Darkest secret");
 		contacts_number++;
 	}
 	else
@@ -82,9 +82,9 @@ void	displayContacts(Contact *Contacts, int contacts_number)
 	{
 		std::cout << std::setw(10);
 		std::cout << i + 1 << " | ";
-		printContactData(Contacts[i].first_name);
-		printContactData(Contacts[i].last_name);
-		printContactData(Contacts[i].nickname);
+		printContactData(Contacts[i].getData("First name"));
+		printContactData(Contacts[i].getData("Last name"));
+		printContactData(Contacts[i].getData("Nickname"));
 		std::cout << std::endl;
 		i++;
 	}
@@ -111,11 +111,11 @@ void PhoneBook::searchContact(void)
 				if (index >= 1 && index <= contacts_number && index <= contacts_number)
 				{
 					index -= 1;
-					std::cout << "First name : " << Contacts[index].first_name << std::endl;
-					std::cout << "Last name : " << Contacts[index].last_name << std::endl;
-					std::cout << "Nickname : " << Contacts[index].nickname << std::endl;
-					std::cout << "Phone number : " << Contacts[index].phone_number << std::endl;
-					std::cout << "Darkest secret : " << Contacts[index].darkest_secret << std::endl;
+					std::cout << "First name : " << Contacts[index].getData("First name") << std::endl;
+					std::cout << "Last name : " << Contacts[index].getData("Last name") << std::endl;
+					std::cout << "Nickname : " << Contacts[index].getData("Nickname") << std::endl;
+					std::cout << "Phone number : " << Contacts[index].getData("Phone number") << std::endl;
+					std::cout << "Darkest secret : " << Contacts[index].getData("Darkest secret") << std::endl;
 					break ;
 				}
 			}

@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:48 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 22:09:38 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 14:23:21 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 class Cat : public Animal 
 {
 	private:
-
+		Brain	*_brain;
+		
 	public:
 
 		Cat();

@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 18:36:30 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/18 02:39:13 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 14:54:01 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 int main()
 {
 	Animal *animals[4] = { new Dog(), new Dog(), new Cat(), new Cat()};
-	
+	Cat	*cat = new Cat();
+
+	cat = animals[2];
 	for (int i = 0; i < 4; i ++)
 		delete (animals[i]);
 }

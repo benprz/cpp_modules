@@ -6,7 +6,7 @@
 /*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 03:53:26 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/05 04:02:10 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 15:27:19 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@
 
 class	Contact
 {
-public:
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string phone_number;
-	std::string darkest_secret;
+	private:
+		std::string _first_name;
+		std::string _last_name;
+		std::string _nickname;
+		std::string _phone_number;
+		std::string _darkest_secret;
+	public:
+		Contact(void);
+		~Contact();
 
-	Contact(void);
-	~Contact();
+		std::string	getData(std::string val);
+		void	setData(std::string type, std::string val);
+
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 03:22:27 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/05 03:54:34 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 14:55:56 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class	PhoneBook
 {
 private:
-	Contact Contacts[9];
+	Contact Contacts[8];
 	int contacts_number;
 
 public:

@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:24 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 23:58:15 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 14:23:21 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Animal
 {
 	protected:
 		std::string _type;
-		Brain		*_brain;
 
 	public:
 
