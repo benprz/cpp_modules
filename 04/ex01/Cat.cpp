@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:54 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/19 14:23:09 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 19:04:51 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ Cat::~Cat()
 {
 	std::cout << "Cat destructor called" << std::endl;	
 	delete _brain;
+}
+
+void	Cat::setBrain(std::string idea)
+{
+	_brain = idea;
 }
 
 void	Cat::makeSound() const

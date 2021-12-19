@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:08 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/19 14:33:00 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/19 19:07:28 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,18 @@ Brain &Brain::operator=(Brain &c)
 	new_brain = new Brain();
 	memcpy((void *)new_brain, (void *)&c, 100);
 	return (*new_brain);
+}
+Brain &Brain::operator=(std::string idea)
+{
+	int i = 0;
+
+	while (ideas[i] != "" && i < 100)
+		i++;
+	if (i == 99)
+		i = 0;
+	if (i < 100)
+		ideas[i] = idea;
+	return (*this);
 }
 
 Brain::~Brain()
