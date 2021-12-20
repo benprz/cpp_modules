@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:08 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/19 19:07:28 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/20 14:28:38 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,13 @@ Brain &Brain::operator=(Brain &c)
 	memcpy((void *)new_brain, (void *)&c, 100);
 	return (*new_brain);
 }
-Brain &Brain::operator=(std::string idea)
+
+Brain::~Brain()
+{
+	std::cout << "Brain destructor called" << std::endl;
+}
+
+void	Brain::addIdea(std::string idea)
 {
 	int i = 0;
 
@@ -45,10 +51,18 @@ Brain &Brain::operator=(std::string idea)
 		i = 0;
 	if (i < 100)
 		ideas[i] = idea;
-	return (*this);
 }
 
-Brain::~Brain()
+void	Brain::setBrain(std::string *ideas)
 {
-	std::cout << "Brain destructor called" << std::endl;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = ideas[i];
+}
+
+void	Brain::getIdeas()
+{
+	for (int i = 0; ideas[i] != "" && i < 100; i++)
+	{
+		std::cout << "ideas[" << i << "] = " << ideas[i] << std::endl;
+	}
 }

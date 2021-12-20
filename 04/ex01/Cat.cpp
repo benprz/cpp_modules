@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:54 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/19 19:04:51 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/20 14:26:40 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,19 @@ Cat::~Cat()
 	delete _brain;
 }
 
-void	Cat::setBrain(std::string idea)
+void	Cat::setBrain(std::string *ideas)
 {
-	_brain = idea;
+	_brain->setBrain(ideas);
+}
+
+void	Cat::addIdea(std::string idea)
+{
+	_brain->addIdea(idea);
+}
+
+void	Cat::getIdeas()
+{
+	_brain->getIdeas();
 }
 
 void	Cat::makeSound() const
