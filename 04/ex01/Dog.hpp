@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:32 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/19 14:15:49 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/17 22:09:42 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Dog : public Animal
 {
 	private:
-		Brain	_brain;
 
 	public:
 

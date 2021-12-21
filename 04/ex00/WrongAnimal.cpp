@@ -6,12 +6,12 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:09 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 22:04:00 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 23:46:50 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"  
-	
+
 #include <iostream>
 
 WrongAnimal::WrongAnimal()

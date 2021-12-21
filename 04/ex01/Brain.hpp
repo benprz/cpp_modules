@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:04 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/20 14:25:54 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 07:08:26 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Brain  
 {
-	protected:
+	private:
 		std::string ideas[100];
 	public:
 
@@ -26,9 +26,7 @@ class Brain
 		Brain &operator=(Brain &c);
 		~Brain();
 
-		void	addIdea(std::string idea);
-		void	setBrain(std::string *ideas);
-		void	getIdeas();
+		Brain	*getIdeas();
 };
 
 #endif
