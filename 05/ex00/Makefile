@@ -1,19 +1,14 @@
 #MAKEFLAGS += --silent
 
-NAME = FragTrap
+NAME = Bureaucrat
 CC = c++
 CPPFLAGS = -g3 -Wextra -Wall -Werror -std=c++98
 INC_DIR = ./
-INC =	ClapTrap.hpp \
-		ScavTrap.hpp \
-		FragTrap.hpp
+INC =	Bureaucrat.hpp
 
 SRC_DIR = ./
 SRC =	main.cpp \
-		ClapTrap.cpp \
-		ScavTrap.cpp \
-		FragTrap.cpp
-
+		Bureaucrat.cpp
 
 OBJ_DIR = .obj/
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)%.o)
@@ -28,6 +23,12 @@ $(NAME): $(OBJ)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(addprefix $(INC_DIR),$(INC))
 	mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) -I$(INC_DIR) -c $< -o $@
+
+exec:
+	./$(NAME)
+
+norm:
+	norminette
 
 clean:
 	/bin/rm -rf $(OBJ_DIR)

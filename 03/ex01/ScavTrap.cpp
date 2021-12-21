@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ben <ben@student.42lyon.fr>                +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 20:18:38 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 02:08:41 by ben              ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 17:00:54 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(std::string name)
 	_hitpoints = 100; 
 	_energy_points = 50; 
 	_attack_damage = 20;
-	std::cout << "ScavTrap string constructor called" << std::endl;
+	std::cout << "ScavTrap name constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap &c)

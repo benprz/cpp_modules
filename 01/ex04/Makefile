@@ -1,7 +1,7 @@
 #MAKEFLAGS += --silent
 
 NAME = replace
-CC = clang++
+CC = c++
 CPPFLAGS = -g3 -Wextra -Wall -Werror
 INC_DIR = ./
 INC =

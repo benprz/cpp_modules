@@ -1,7 +1,7 @@
 #MAKEFLAGS += --silent
 
 NAME = Zombie
-CC = clang++
+CC = c++
 CPPFLAGS = -g3 -Wextra -Wall -Werror
 INC_DIR = ./
 INC =	Zombie.hpp

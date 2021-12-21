@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 16:58:51 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/16 11:30:16 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 14:42:45 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int main(void)
 	std::cout << b << std::endl;
 
 	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
 	return 0; 
 }

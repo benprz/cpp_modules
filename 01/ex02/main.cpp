@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 03:18:42 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/07 03:40:51 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 10:42:00 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	main(void)
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
 
-	(void)stringPTR;
-	(void)stringREF;
 	std::cout << &str << std::endl;
 	std::cout << stringPTR << std::endl;
 	std::cout << &stringREF << std::endl;

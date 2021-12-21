@@ -27,12 +27,6 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(addprefix $(INC_DIR),$(INC))
 	mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) -I$(INC_DIR) -c $< -o $@
 
-exec:
-	./$(NAME)
-
-norm:
-	norminette
-
 clean:
 	/bin/rm -rf $(OBJ_DIR)
 

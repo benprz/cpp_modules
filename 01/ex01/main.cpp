@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 17:22:20 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/07 03:12:42 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 10:29:55 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,11 @@
 int	main(void)
 {
 	Zombie	*zHorde;
-	Zombie	*zTmp;
 
 	zHorde = zombieHorde(5, "zumbeeeees");
-	while (zHorde)
+	for (int i = 0; i < 5; i++)
 	{
-		zHorde->announce();
-		zTmp = zHorde->next;
-		delete zHorde;
-		zHorde = zTmp;
+		zHorde[i].announce();
 	}
 	return (EXIT_SUCCESS);
 }

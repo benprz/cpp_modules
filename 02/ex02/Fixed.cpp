@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 16:58:57 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/16 11:27:00 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 15:33:01 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,7 +173,14 @@ int Fixed::toInt(void) const
 
 Fixed &Fixed::min(Fixed &c1, Fixed &c2)
 {
-	if (c1 < c2)
+	if (c1.getRawBits() < c2.getRawBits())
+		return (c1);
+	return (c2);
+}
+
+const Fixed &Fixed::min(const Fixed &c1, const Fixed &c2)
+{
+	if (c1.getRawBits() < c2.getRawBits())
 		return (c1);
 	return (c2);
 }
@@ -185,8 +192,16 @@ Fixed &Fixed::max(Fixed &c1, Fixed &c2)
 	return (c2);
 }
 
+const Fixed &Fixed::max(const Fixed &c1, const Fixed &c2)
+{
+	if (c1.getRawBits() > c2.getRawBits())
+		return (c1);
+	return (c2);
+}
+
 std::ostream &operator<<(std::ostream &stream, const Fixed &c)
 {
      stream << c.toFloat();
 	 return (stream);
 }
+

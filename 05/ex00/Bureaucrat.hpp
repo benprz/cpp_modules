@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/16 20:18:46 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/21 17:10:15 by bperez           ###   ########lyon.fr   */
+/*   Created: 2021/12/21 09:16:26 by bperez            #+#    #+#             */
+/*   Updated: 2021/12/21 12:37:15 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef BUREAUCRAT_H
+#define BUREAUCRAT_H
 
-#include "ClapTrap.hpp"
+#include <iostream>
 
-class FragTrap : public ClapTrap
+class Bureaucrat  
 {
-	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(FragTrap &c);
-		FragTrap &operator=(FragTrap &c);
-		~FragTrap();
+	private:
+		const std::string	_name;
+		int	_grade;
 
-		void attack(std::string const & target);
-		void	highFivesGuys(void);
+	public:
+
+		Bureaucrat();
+		Bureaucrat(std::string name);
+		Bureaucrat(Bureaucrat &c);
+		Bureaucrat &operator=(Bureaucrat &c);
+		~Bureaucrat();
+
+		std::string	getName();
+		int	getGrade();
+
+		void	incrementGrade();
+		void	decrementGrade();
+
 };
+		
+std::ostream	&operator<<(std::ostream &o, Bureaucrat &c);
 
 #endif

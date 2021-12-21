@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: neben <neben@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 08:08:42 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/08 10:40:11 by neben            ###   ########lyon.fr   */
+/*   Updated: 2021/12/21 11:16:21 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int	main(void)
 	Karen	Karen;
 
 	Karen.complain("DEBUG");
-	Karen.complain("ploof");
 	Karen.complain("ERROR");
 	Karen.complain("INFO");
 	Karen.complain("WARNING");
+	Karen.complain("");
+	Karen.complain("allo");
 }

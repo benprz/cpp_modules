@@ -1,2 +1,2 @@
 all:
-	g++ -Wall -Wextra -Werror main.cpp
+	c++ -Wall -Wextra -Werror main.cpp
