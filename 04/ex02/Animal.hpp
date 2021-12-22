@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:24 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 12:49:19 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 15:02:14 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 		Animal();
 		Animal(Animal &c);
 		Animal &operator=(Animal &c);
-		virtual ~Animal();
+		virtual ~Animal() = 0;
 
 		const std::string &getType() const;
 		virtual void	makeSound() const;
