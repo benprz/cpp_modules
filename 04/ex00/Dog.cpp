@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:35 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 22:11:31 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 00:19:47 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Dog::Dog()
 		
 Dog::Dog(Dog &c)
 {
+	std::cout << "Dog constructor called" << std::endl;	
 	*this = c;
 }
 

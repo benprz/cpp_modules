@@ -7,8 +7,6 @@ INC_DIR = ./
 INC =	Animal.hpp \
 		Dog.hpp \
 		Cat.hpp \
-		WrongAnimal.hpp \
-		WrongCat.hpp \
 		Brain.hpp
 
 SRC_DIR = ./
@@ -16,8 +14,6 @@ SRC =	main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp \
 		Brain.cpp
 
 OBJ_DIR = .obj/
@@ -33,12 +29,6 @@ $(NAME): $(OBJ)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(addprefix $(INC_DIR),$(INC))
 	mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) -I$(INC_DIR) -c $< -o $@
-
-exec:
-	./$(NAME)
-
-norm:
-	norminette
 
 clean:
 	/bin/rm -rf $(OBJ_DIR)

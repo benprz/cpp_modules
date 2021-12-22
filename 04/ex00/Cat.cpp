@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:54 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 22:07:37 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 00:17:32 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Cat::Cat()
 	
 Cat::Cat(Cat &c)
 {
+	std::cout << "Cat copy constructor called" << std::endl;	
 	*this = c;
 }
 

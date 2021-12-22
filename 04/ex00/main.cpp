@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 18:36:30 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 23:06:09 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 01:21:05 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int main()
 
 	const WrongAnimal *wrong_meta = new WrongAnimal();
 	const WrongAnimal *wrong_i = new WrongCat();
+	wrong_meta->makeSound();
 	wrong_i->makeSound();
 	delete wrong_meta;
 	delete wrong_i;

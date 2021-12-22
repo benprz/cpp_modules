@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:54 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/21 07:22:48 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 10:58:01 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ Cat::Cat()
 	
 Cat::Cat(Cat &c)
 {
-	std::cout << "Dog copy constructor called" << std::endl;	
+	std::cout << "Cat copy constructor called" << std::endl;	
 	*this = c;
 }
 
 Cat &Cat::operator=(Cat &c)
 {
-	std::cout << "Dog assignement operator called" << std::endl;	
+	std::cout << "Cat assignement operator called" << std::endl;	
 	_type = c.getType();
 	delete	_brain;
-	_brain = new Brain(c._brain->getIdeas());
+	_brain = new Brain(c);
 	return (*this);
 }
 
@@ -50,4 +50,9 @@ void	Cat::makeSound() const
 Brain	*Cat::getBrain()
 {
 	return (_brain);
+}
+
+void	Cat::setBrain()
+{
+	setBrain();
 }

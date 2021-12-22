@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:09 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 22:09:56 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 00:13:51 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Animal::Animal()
 		
 Animal::Animal(Animal &c)
 {
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = c;
 }
 

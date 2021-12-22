@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:04 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/21 07:08:26 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/12/22 10:41:43 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Brain  
 {
 	private:
-		std::string ideas[100];
+		std::string _ideas[100];
 	public:
 
 		Brain();
