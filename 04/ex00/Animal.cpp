@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:09 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 00:13:51 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 20:00:28 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Animal::Animal(Animal &c)
 
 Animal &Animal::operator=(Animal &c)
 {
-	_type = c.getType();
+	type = c.getType();
 	return (*this);
 }
 
@@ -39,7 +39,7 @@ Animal::~Animal()
 
 const std::string	&Animal::getType() const
 {
-	return (_type);
+	return (type);
 }
 
 void Animal::makeSound() const

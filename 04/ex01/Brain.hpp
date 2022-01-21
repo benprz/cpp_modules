@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:04 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 13:38:55 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:47:48 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Brain
 		~Brain();
 
 		std::string	*getIdeas();
-		std::string	getIdea();
 		void	setIdeas(std::string *ideas);
 };
 

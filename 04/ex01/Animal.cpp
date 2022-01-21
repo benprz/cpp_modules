@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:09 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/17 23:58:07 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:02:02 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 	
 #include <iostream>
 
-Animal::Animal() : _type(""), _brain(NULL)
+Animal::Animal()
 {
 	std::cout << "Animal constructor called" << std::endl;	
 }

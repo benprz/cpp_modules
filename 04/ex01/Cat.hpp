@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:48 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 13:18:19 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:00:14 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #define CAT_H
 	
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal 
 {
 	private:
+		Brain		*_brain;
 
 	public:
 

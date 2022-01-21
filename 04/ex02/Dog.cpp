@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:35 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 13:49:53 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:59:54 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Dog::Dog()
 Dog::Dog(Dog &c)
 {
 	std::cout << "Dog copy constructor called" << std::endl;	
+	_brain = NULL;
 	*this = c;
 }
 

@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:13:54 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 00:17:32 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 20:00:54 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Cat::Cat()
 {
 	std::cout << "Cat constructor called" << std::endl;	
-	_type = "Cat";
+	type = "Cat";
 }
 	
 Cat::Cat(Cat &c)
@@ -28,7 +28,7 @@ Cat::Cat(Cat &c)
 
 Cat &Cat::operator=(Cat &c)
 {
-	_type = c.getType();
+	type = c.getType();
 	return (*this);
 }
 

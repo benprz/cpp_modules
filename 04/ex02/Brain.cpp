@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 23:11:08 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 13:47:56 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:48:05 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Brain::Brain()
 {
 	std::cout << "Brain constructor called" << std::endl;
-	_ideas[0] = "manon";
 }
 
 Brain::Brain(Brain &c)
@@ -49,11 +48,6 @@ Brain::~Brain()
 std::string	*Brain::getIdeas()
 {
 	return (_ideas);
-}
-
-std::string Brain::getIdea()
-{
-	return (_ideas[0]);
 }
 
 void	Brain::setIdeas(std::string *ideas)

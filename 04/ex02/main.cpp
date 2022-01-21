@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 18:36:30 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 15:07:44 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 21:48:34 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main()
 	for (int i = 0; dogIdeas[i] != ""; i++)
 		std::cout << "Dog2 Ideas " << i << " : " << dogIdeas[i] << std::endl;
 
-	printf("%p %p\n", d1, d2);
+	//printf("%p %p\n", d1, d2);
 
 	c1->setBrain(ideas2);
 	animals[3] = new Cat(*c1);
@@ -52,13 +52,17 @@ int main()
 	for (int i = 0; catIdeas[i] != ""; i++)
 		std::cout << "Cat1 Ideas " << i << " : " << catIdeas[i] << std::endl;
 
+	free(c1); // DEEP PROOF
+
 	catIdeas = c2->getBrain()->getIdeas();
 
 	std::cout << std::endl;
 	for (int i = 0; catIdeas[i] != ""; i++)
 		std::cout << "Cat2 Ideas " << i << " : " << catIdeas[i] << std::endl;
 
-	printf("%p %p\n", c1, c2);
+	animals[2] = new Cat(*c2);
+
+	//printf("%p %p\n", c1, c2);
 
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i ++)

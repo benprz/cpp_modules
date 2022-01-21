@@ -13,7 +13,7 @@
       "environment": [],
       "program": "/Users/neben/Documents/42/cpp_modules/04/ex01/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb",
+      "MIMode": "gdb",
       "externalConsole": false
     }
   ]

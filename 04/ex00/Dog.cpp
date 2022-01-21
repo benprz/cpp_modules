@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:18:35 by bperez            #+#    #+#             */
-/*   Updated: 2021/12/22 00:19:47 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/09 20:00:40 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Dog::Dog()
 {
 	std::cout << "Dog constructor called" << std::endl;	
-	_type = "Dog";
+	type = "Dog";
 }
 		
 Dog::Dog(Dog &c)
@@ -28,7 +28,7 @@ Dog::Dog(Dog &c)
 
 Dog &Dog::operator=(Dog &c)
 {
-	_type = c.getType();
+	type = c.getType();
 	return (*this);
 }
 
