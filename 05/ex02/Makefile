@@ -1,14 +1,23 @@
 #MAKEFLAGS += --silent
 
-NAME = Bureaucrat
+NAME = Form
 CC = clang++
 CPPFLAGS = -g3 -Wextra -Wall -Werror -std=c++98
 INC_DIR = ./
-INC =	Bureaucrat.hpp
+INC =	Bureaucrat.hpp \
+		Form.hpp \
+		ShrubberyCreationForm.hpp \
+		RobotomyRequestForm.hpp \
+		PresidentialPardonForm.hpp
+
 
 SRC_DIR = ./
 SRC =	main.cpp \
-		Bureaucrat.cpp 
+		Bureaucrat.cpp \
+		Form.cpp \
+		ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp \
+		PresidentialPardonForm.cpp
 
 OBJ_DIR = .obj/
 OBJ = $(SRC:%.cpp=$(OBJ_DIR)%.o)

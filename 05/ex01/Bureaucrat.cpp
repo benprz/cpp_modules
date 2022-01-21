@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 22:20:26 by bperez            #+#    #+#             */
-/*   Updated: 2022/01/05 01:23:16 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/20 10:25:02 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,19 @@ void Bureaucrat::increaseGrade(int amount)
 void Bureaucrat::decreaseGrade(int amount)
 {
 	increaseGrade(-amount);
+}
+
+void Bureaucrat::signForm(Form &c)
+{
+	try
+	{
+		c.beSigned(*this);
+		std::cout << *this << " signs " << c << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << *this << " cannot sign " << c << "because " << e.what() << std::endl;
+	}
 }
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat &c)

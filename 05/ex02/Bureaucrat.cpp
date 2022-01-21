@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 22:20:26 by bperez            #+#    #+#             */
-/*   Updated: 2022/01/05 01:23:16 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 03:29:32 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
-std::string Bureaucrat::getName()
+std::string Bureaucrat::getName() const
 {
 	return (_name);
 }
 
-int Bureaucrat::getGrade()
+int Bureaucrat::getGrade() const
 {
 	return (_grade);
 }
@@ -60,6 +60,33 @@ void Bureaucrat::increaseGrade(int amount)
 void Bureaucrat::decreaseGrade(int amount)
 {
 	increaseGrade(-amount);
+}
+
+void Bureaucrat::signForm(Form &c)
+{
+	try
+	{
+		std::cout << *this << " signs " << c << std::endl;
+		c.beSigned(*this);
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << *this << " failed signing " << c << "because " << e.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(Form &c)
+{
+	try
+	{
+		std::cout << *this << " executes " << c << std::endl;
+		c.execute(*this);
+		c.action();
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << *this << " failed executing " << c << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat &c)
